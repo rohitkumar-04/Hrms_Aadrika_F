@@ -1,10 +1,12 @@
 package utils;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -56,6 +58,18 @@ public class ScreenshotTake {
 	 * System.err.println("❌ Could not take screenshot at the expected moment.");
 	 * e.printStackTrace(); } }
 	 */
+	
+	public static String ProjectfileScreenshot(WebDriver driver, String screenshotName) throws IOException {
+		String dateName = new SimpleDateFormat("yyyy-MM-dd-hhmmss").format(new Date());
+		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+		File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
+		String destination = System.getProperty("user.dir") + "/FailedTestScreenshots/" + screenshotName + dateName
+				+ ".png";
+		File finalDestination = new File(destination);
+		FileUtils.copyFile(source, finalDestination);
+		return destination;
+
+	}
 
 }
 
