@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="HRMS Automation Suite">
+    <parameter name="excelPath" value="C:\\Users\\aadrika\\Desktop\\HRMS\\Onboard_data1.xlsx" />
+    <parameter name="dataAction" value="1" />
+
+    <test thread-count="5" name="Test">
+        <classes>
+            <class name="tests.MainTestN">
+                <methods>
+                    <include name="Onboard_Emp" />
+                    <include name="GoDashboard" />
+                    <include name="GoPension" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

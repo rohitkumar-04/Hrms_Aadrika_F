@@ -6,9 +6,10 @@
       <class name="tests.MainTestN">
         <methods>
           <include name="ReportClose"/>
+          <include name="GoPension"/>
           <include name="TestResult_BrowserClose"/>
           <include name="ReportSetup"/>
-          <include name="Onboard_Emp"/>
+          <include name="GoDashboard"/>
           <include name="BrowserSetup"/>
         </methods>
       </class> <!-- tests.MainTestN -->
