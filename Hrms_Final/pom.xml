@@ -37,6 +37,11 @@
 			<version>5.4.1</version>
 		</dependency>
 
+		<dependency>
+			<groupId>HrmsTest1</groupId>
+			<artifactId>HrmsTeest1</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 </project>

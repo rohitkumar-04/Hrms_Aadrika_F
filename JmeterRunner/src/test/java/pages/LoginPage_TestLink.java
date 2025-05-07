@@ -26,12 +26,12 @@ public class LoginPage_TestLink {
 
 	By search2 = By.xpath("//button[@type='submit']");
 	
-	String user_name1=("hradminrmc@gmail.com"), user_name2=("hradminbundu@gmail.com");
+	String user_name=("hradminrmc@gmail.com"), user_name2=("hradminbundu@gmail.com");
 	String pass_word1=("Admin1#");
 
 	public void user_name() {
 		// Enter the username
-		driver.findElement(search).sendKeys(user_name1);
+		driver.findElement(search).sendKeys(user_name);
 
 	}
 

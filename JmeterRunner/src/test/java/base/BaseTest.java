@@ -53,8 +53,22 @@ public class BaseTest {
 
 		String dateTime = new SimpleDateFormat("dd-MM-yyyy-hh-mm").format(new Date());
 		ReportDateAndTime = dateTime;
-		extentSparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + File.separator + "Hrms_Reports"
-				+ File.separator + "HrmsAutomationReports" + dateTime + ".html");
+		/*
+		 * // Set your custom folder path String customPath =
+		 * System.getProperty("user.dir") + File.separator + "JmeterRunner" +
+		 * File.separator + "reports";
+		 * 
+		 * // Optional: add timestamp to avoid overwriting String reportFileName =
+		 * "HrmsAutomationReport_" + dateTime + ".html";
+		 * 
+		 * // Full report path String fullReportPath = customPath + File.separator +
+		 * reportFileName; extentReports = new ExtentReports();
+		 * extentReports.attachReporter(fullReportPath);
+		 */
+
+		extentSparkReporter = new ExtentSparkReporter(
+				System.getProperty("user.dir") + File.separator + "JmeterRunner" + File.separator + "reports"
+						+ File.separator + "reports" + File.separator + "HrmsAutomationReports" + dateTime + ".html");
 		extentReports = new ExtentReports();
 		extentReports.attachReporter(extentSparkReporter);
 
@@ -73,15 +87,17 @@ public class BaseTest {
 	public void BrowserSetup(Method testMethod) throws InterruptedException {
 		logger = extentReports.createTest(testMethod.getName());
 
-		
 		ChromeOptions options = new ChromeOptions();
 		// Defining headless mode for Chrome
 		options.addArguments("--headless=new");
-		
+
 		// No headless argument
-	/*	options.addArguments("--start-maximized"); // Starts the browser maximized also use (--incognito)
-		options.addArguments("--disable-notifications"); // Optional: disables popups*/
-		
+		/*
+		 * options.addArguments("--start-maximized"); // Starts the browser maximized
+		 * also use (--incognito) options.addArguments("--disable-notifications"); //
+		 * Optional: disables popups
+		 */
+
 		// Passing headless argument to the driver
 		try {
 			driver = new ChromeDriver(options);

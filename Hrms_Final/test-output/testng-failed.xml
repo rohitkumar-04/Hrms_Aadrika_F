@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="tests.MainTest_TestNG">
+        <methods>
+          <include name="step1_OffDetails"/>
+          <include name="step5_EduTrainDetails"/>
+          <include name="setup"/>
+          <include name="step3_PersonalDetails"/>
+          <include name="step9_SalaryInfo"/>
+          <include name="step7_ServiceHistory"/>
+          <include name="step10_TimeBoundDetails"/>
+          <include name="step6_JoinInfo"/>
+          <include name="step8_FamilyDetails"/>
+          <include name="onboardEmployee"/>
+          <include name="step2_EmpDetails"/>
+          <include name="GoDashboard"/>
+          <include name="tearDown"/>
+          <include name="GoPension"/>
+          <include name="step4_PermanentAddress"/>
+        </methods>
+      </class> <!-- tests.MainTest_TestNG -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
