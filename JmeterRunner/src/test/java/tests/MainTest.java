@@ -5,10 +5,24 @@ import java.util.Scanner;
 import org.openqa.selenium.WebDriver;
 
 import base.DriverManage;
+import pages.Click_Button;
+import pages.Emp_Details;
+import pages.Emp_Edu_Train_Details;
+import pages.Emp_Family_Details;
+import pages.Emp_Join_Inform;
+import pages.Emp_Off_Details;
 import pages.Emp_Pension_Details;
+import pages.Emp_Prnt_Add;
+import pages.Emp_Prsnl_Details;
+import pages.Emp_Sal_Info;
+import pages.Emp_Service_History;
+import pages.Emp_Time_Bound_Details;
 import pages.LoginPage_TestLink;
+import pages.OnboardNew;
 import pages.Pension_Management;
+import utils.Disappear_Element_Handler;
 import utils.Excel_Reader;
+import utils.ScreenshotTake;
 import utils.Tear_Down;
 import utils.WaitHelper;
 
@@ -27,7 +41,7 @@ public class MainTest {
 		LoginPage_TestLink lt = new LoginPage_TestLink(driver);
 		lt.loginWebPage();
 		wt.waitTime();
-/*
+
 		// Do onboarding steps here...
 		OnboardNew on = new OnboardNew(driver);
 		on.onboard_New(driver);
@@ -107,7 +121,7 @@ public class MainTest {
 		// Wait and take screenshot
 		ScreenshotTake.takeScreenshot(driver, "Employee_Boarded");
 		wt.waitTime();
-*/
+
 		System.out.println("Enter the value 1:View and 2:Edit");
 		
 		int data_Action = sc.nextInt();

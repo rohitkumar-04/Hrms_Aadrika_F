@@ -18,8 +18,8 @@ public class SimpleJMeterRunner {
 		String jmeterHome = "D:/Software/apache-jmeter-5.6.3"; // ✅ Change this to your JMeter path
 
 		// Set path to JMX test plan
-		String testPlanPath = "D:\\EclipseWorkspace\\JmeterRunner\\plan\\build-web-test-plan.jmx"; // ✅ Change this to
-																									// your test plan
+		//String testPlanPath = "D:\\EclipseWorkspace\\JmeterRunner\\plan\\build-web-test-plan.jmx"; // ✅ Change this to
+		String testPlanPath = "C:\\Users\\aadrika\\Desktop\\HRMS\\jmeter\\hrms_demo.jmx";																						// your test plan
 
 		// Set path for .jtl results file
 		String resultPath = "D:/EclipseWorkspace/JmeterRunner/results/results.jtl"; // ✅ Change this
